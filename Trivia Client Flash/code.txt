@@ -1,0 +1,24 @@
+import trivia.CustomSocket;
+
+var socket:CustomSocket = new CustomSocket("localhost", 2000);
+socket.writeln("JOIN JT"); // be sure to insert User_ID
+socket.flush();
+var response:String = "";
+while(response == ""){
+	// wait until we have something
+	response = socket.getResponse()
+}
+
+
+
+
+addEventListener(Event.ENTER_FRAME, onEnter);
+function onEnter(e:Event):void
+{
+	if(this.currentFrame == this.totalFrames){
+		removeEventListener(Event.ENTER_FRAME, onEnter);
+        trace("I'm a fugly slut!");
+		stop()
+    }
+
+}
